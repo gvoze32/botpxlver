@@ -57,7 +57,7 @@ const headers = {
     const domains = [];
 
     for (let i = 0; i < maildom; i++) {
-        console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Mengambil domain ke-${i+1}...`);
+        console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Mengambil domain (${i+1}/` + maildom + `)`);
         await new Promise((resolve, reject) => {
             request(url, (error, response, body) => {
                 if (!error && response.statusCode === 200) {
