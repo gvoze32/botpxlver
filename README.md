@@ -7,16 +7,12 @@
 
 ## Usage
 V1
-`
 1. Install py dependencies: `pip install requests beautifulsoup4`
 2. Run domains getter `python3 get_domains.py`
 3. Run the script: `node indexv1.js`
-`
 
 V2
-`
 1. Run the script: `node indexv2.js`
-`
 
 Follow the prompts to input the referral code, and the number of referrals you want to generate.
 
