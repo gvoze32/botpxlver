@@ -20,4 +20,3 @@ The script will then proceed to register users with randomly generated email add
 
 ## Additional Notes
 - Adjust the delay between requests (`setTimeout`) according to your needs and service limitations to avoid rate-limiting or bans.
-- Adjust the looping for domain fetcher on line 58 according to your needs (`default: 50`), the bigger the better, the more domains you will get.

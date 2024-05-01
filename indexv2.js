@@ -51,11 +51,12 @@ const headers = {
 (async() => {
     var referralCode = readline.question(`[ ${moment().format("HH:mm:ss")} ] ` + 'Reff Code : ');
     var jumlah = readline.question(`[ ${moment().format("HH:mm:ss")} ] ` + 'Jumlah Reff : ');
+    var maildom = readline.question(`[ ${moment().format("HH:mm:ss")} ] ` + 'Jumlah Domain (default: 20): ');
 
     const url = "https://generator.email/";
     const domains = [];
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < maildom; i++) {
         console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Mengambil domain ke-${i+1}...`);
         await new Promise((resolve, reject) => {
             request(url, (error, response, body) => {
