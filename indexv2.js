@@ -56,7 +56,7 @@ const headers = {
     const domains = [];
 
     for (let i = 0; i < 50; i++) {
-        console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Fetching domain ${i+1}...`);
+        console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Mengambil domain ke-${i+1}...`);
         await new Promise((resolve, reject) => {
             request(url, (error, response, body) => {
                 if (!error && response.statusCode === 200) {
@@ -79,7 +79,7 @@ const headers = {
         await new Promise(resolve => setTimeout(resolve, 5000));
     }
 
-    console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Total domain unik: ${domains.length}`);
+    console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Total domain: ${domains.length}`);
 
     const otpRequestURL = 'https://api.pixelverse.xyz/api/otp/request';
     const otpVerificationURL = 'https://api.pixelverse.xyz/api/auth/otp';
