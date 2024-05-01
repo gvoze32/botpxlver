@@ -56,6 +56,7 @@ const headers = {
     const domains = [];
 
     for (let i = 0; i < 50; i++) {
+        console.log(`[ ${moment().format("HH:mm:ss")} ] ` + `Fetching domain ${i+1}...`);
         await new Promise((resolve, reject) => {
             request(url, (error, response, body) => {
                 if (!error && response.statusCode === 200) {
