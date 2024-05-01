@@ -8,7 +8,7 @@
 
 ## Usage
 V1
-1. Run domains getter `python3 get_domains.py`
+1. Run domains fetcher `python3 get_domains.py`
 2. Run the script: `node indexv1.js`
 
 V2
@@ -19,4 +19,5 @@ Follow the prompts to input the referral code, and the number of referrals you w
 The script will then proceed to register users with randomly generated email addresses and refer them using the provided referral code.
 
 ## Additional Notes
-- Adjust the delay between requests (`setTimeout`) according to your needs and service limitations to avoid rate-limiting or bans
+- Adjust the delay between requests (`setTimeout`) according to your needs and service limitations to avoid rate-limiting or bans.
+- Adjust the looping for domain fetcher on line 58 according to your needs (`default: 50`), the bigger the better, the more domains you will get.
