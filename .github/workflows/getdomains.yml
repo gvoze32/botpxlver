@@ -1,0 +1,30 @@
+name: Get Domains
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/120 * * * *'
+
+jobs:
+  get-domains:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests beautifulsoup4
+    - name: Get email domains
+      run: |
+        python get_domains.py
+    - name: Commit changes
+      run: |
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+        git add domains.txt
+        git commit -m "Update domains list" || echo "No changes to commit"
+        git push
