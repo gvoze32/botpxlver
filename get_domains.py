@@ -5,7 +5,7 @@ import time
 url = "https://generator.email/"
 
 with open("domains.txt", "a") as file:
-    for i in range(50):
+    for i in range(100):
         response = requests.get(url)
         soup = BeautifulSoup(response.content, "html.parser")
         div_list = soup.find("div", class_="tt-dataset-typeahead_as3gsdr")
