@@ -3,7 +3,7 @@ name: Get Domains
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/120 * * * *'
+    - cron: '*/360 * * * *'
 
 jobs:
   get-domains:
