@@ -14,7 +14,7 @@ V1
 V2
 1. Run the script: `node indexv2.js`
 
-Follow the prompts to input the referral code, and the number of referrals you want to generate.
+Follow the prompts to input the referral code, the number of referrals you want to generate, and get email domains count.
 
 The script will then proceed to register users with randomly generated email addresses and refer them using the provided referral code.
 
